@@ -1,3 +1,4 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="UTF-8">
@@ -6,6 +7,82 @@
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 
 <script src=""></script>
+
+<style>
+
+.formulaire{
+background:red;
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+	display:block;
+	}
+h1{
+	font-size: 40px;
+    font-weight: 800;
+    line-height: 1.1;
+	text-align:center;
+	display:block;
+	margin: 50px  auto;	
+	    outline: none;
+    color: rgb(55, 53, 47);
+    caret-color: rgb(55, 53, 47);
+    white-space: pre-wrap;
+    word-break: break-word;
+	  
+	}
+		.formulaire {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.formulaire input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.formulaire textarea {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.formulaire button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(55, 53, 47);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.formulaire button:hover,.formulaire button:active,.formulaire button:focus {
+  background: #D63C3C;
+}	
+	
+</style>
 <body>
 
 <!--  ----------------------------------------------------------------------  -->
@@ -18,6 +95,8 @@
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
+<h1 class="title">Euromenage form </h1>
+<div class="formulaire">
 
 <form action="https://alola--euromenage.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
@@ -31,20 +110,20 @@
 <!--  <input type="hidden" name="debugEmail" value="team@alola.fr">           -->
 <!--  ----------------------------------------------------------------------  -->
 
-<label for="name">Nom du contact</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+<input  id="name" maxlength="80" name="name" size="20" type="text" placeholder ="Nom complet" required  /><br>
 
-<label for="email">E-mail</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+<input  id="email" maxlength="80" name="email" size="20" type="email" placeholder ="E-mail"  required  /><br>
 
-<label for="phone">Téléphone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
+<input  id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder ="Téléphone" required  /><br>
 
-<label for="subject">Objet</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+<input  id="subject" maxlength="80" name="subject" size="20" type="text" placeholder ="Objet"  required /><br>
 
-<label for="description">Description</label><textarea name="description"></textarea><br>
+<textarea name="description" placeholder ="Description"></textarea><br>
 
-<input type="submit" name="submit">
+<button type="submit" name="submit"> Envoyer</button>
 
 </form>
 
-
+</div>
 </body>
 </html>
