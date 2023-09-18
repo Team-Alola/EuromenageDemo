@@ -5,11 +5,11 @@
 <title>Formulaire Euromenage</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-
+​
 <script src=""></script>
-
+​
 <style>
-
+​
 .formulaire{
 background:red;
     width: 100%;
@@ -77,59 +77,84 @@ h1{
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  border-radius:5px;
 }
 .formulaire button:hover,.formulaire button:active,.formulaire button:focus {
   background: #D63C3C;
 }	
-	
+label {
+    font-family: "Roboto", sans-serif;
+    text-align: left;
+   
+    display: block;
+    padding: 9px;
+​
+​
+}
+	.formulaire select {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 5px;
+}
 </style>
 <body>
-
+​
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
 <!--  If necessary, please modify the charset parameter to specify the        -->
 <!--  character set of your HTML page.                                        -->
 <!--  ----------------------------------------------------------------------  -->
-
-
+​
+​
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: Please add the following <FORM> element to your page.             -->
 <!--  ----------------------------------------------------------------------  -->
 <h1 class="title">Euromenage form </h1>
 <div class="formulaire">
-
+​
 <form action="https://alola--euromenage.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
-
+​
 <input type=hidden name="orgid" value="00D0C0000000VwH">
 <input type=hidden name="retURL" value="https://www.fagor-sda.com/">
-
+​
 <!--  ----------------------------------------------------------------------  -->
 <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
 <!--  these lines if you wish to test in debug mode.                          -->
 <!--  <input type="hidden" name="debug" value=1>                              -->
 <!--  <input type="hidden" name="debugEmail" value="team@alola.fr">           -->
 <!--  ----------------------------------------------------------------------  -->
-
-<input  id="name" maxlength="80" name="name" size="20" type="text" placeholder ="Nom complet" required  /><br>
-
-<input  id="email" maxlength="80" name="email" size="20" type="email" placeholder ="E-mail"  required  /><br>
-
-<input  id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder ="Téléphone" required  /><br>
-
-<input  id="subject" maxlength="80" name="subject" size="20" type="text" placeholder ="Objet"  required /><br>
-
-<textarea name="description" placeholder ="Description"></textarea><br>
-
-
-<label for="recordType">Type d'enregistrement de requête</label><select  id="recordType" name="recordType"><option value="">- Aucun -</option><option value="0120C000002lnqD">Gros électroménagers</option>
+<label for="name">Nom du contact</label>
+<input  id="name" maxlength="80" name="name" size="20" type="text" placeholder ="Votre nom et prénom" required  /><br>
+<label for="email">E-mail</label>
+<input  id="email" maxlength="80" name="email" size="20" type="email" placeholder ="Votre adresse mail"  required  /><br>
+<label for="phone">Téléphone</label>
+<input  id="phone" maxlength="40" name="phone" size="20" type="tel" placeholder ="Votre numéro " required  /><br>
+<label for="subject">Objet</label>
+<input  id="subject" maxlength="80" name="subject" size="20" type="text" placeholder ="Objet de mail "  required /><br>
+<label for="description">Description</label>
+<textarea name="description" placeholder ="Description ..."></textarea><br>
+​
+​
+<label for="recordType">Type d'enregistrement de la requête</label>
+​
+<select  id="recordType" name="recordType" maxlength="80"  >
+<option value="">- Aucun -</option>
+<option value="0120C000002lnqD">Gros électroménagers</option>
 <option value="0120C000002lnq8">Petits électroménagers et casserolerie</option>
 <option value="0120C000002lnqI">Pompes à chaleur</option>
 </select><br>
-
+<br>
 <button type="submit" name="submit"> Envoyer</button>
-
+​
 </form>
-
+​
 </div>
 </body>
 </html>
